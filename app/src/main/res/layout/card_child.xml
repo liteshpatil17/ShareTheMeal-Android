@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back_gradient2"
+    android:orientation="vertical"
+    android:paddingEnd="16dp"
+    android:paddingStart="16dp">
+
+
+    <ImageView
+        android:id="@+id/homeless_pic"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/img_round_corner" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeless_pic"
+        android:layout_marginTop="7dp"
+        android:id="@+id/tag_lay"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tag" />
+
+        <TextView
+            android:id="@+id/homeless_taggedBy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tagged By"
+            android:layout_marginLeft="5dp"
+            android:textColor="#f3c6c6c6"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/homeless_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tag_lay"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Name"
+        android:textColor="@android:color/black"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/ageAndGender">
+
+
+        <TextView
+            android:id="@+id/homeless_no_thumbsUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ageAndGender"
+            android:layout_gravity="center"
+            android:layout_marginLeft="3dp"
+            android:textSize="20dp"
+            tools:text="50" />
+
+        <ImageButton
+            android:id="@+id/homeless_thumbsUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/heart" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/homeless_thumbsDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeless_pic"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="7dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_thumbs_down"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/homeless_no_thumbsDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/homeless_thumbsDown"
+        android:layout_below="@id/homeless_thumbsDown"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:id="@+id/ageAndGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/homeless_name"
+        android:layout_centerHorizontal="true"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/age" />
+
+        <TextView
+            android:id="@+id/homeless_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Age"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/homeless_Gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+
+            android:text="Gender"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ageAndGender"
+        android:layout_marginTop="7dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/details" />
+
+        <TextView
+            android:id="@+id/homeless_desc"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Description"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+</RelativeLayout>

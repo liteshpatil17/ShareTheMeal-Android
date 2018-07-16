@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_fill_homeless_details"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.example.android.sharethemeal.fill_child_details">
+
+    <SurfaceView
+        android:id="@+id/sv_login"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/back_color" />
+
+    <TextView
+        android:id="@+id/child_de_appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/sv_login"
+        android:paddingStart="10dp"
+        android:paddingTop="10dp"
+        android:text="@string/app_name"
+        android:textColor="@android:color/white"
+        android:textSize="40sp" />
+
+    <TextView
+        android:id="@+id/child_de_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/sv_login"
+        android:paddingBottom="10dp"
+        android:paddingStart="10dp"
+        android:text="Enter Details"
+        android:textColor="@android:color/white"
+        android:textSize="35sp" />
+
+    <ImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignRight="@id/login_appName"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/heaer_icon" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/sv_login"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <FrameLayout
+                android:id="@+id/fl_uploadPhoto"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/darker_gray"
+                    android:src="@drawable/ic_add_person" />
+
+                <TextView
+                    android:id="@+id/tv_upchPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/opac_transparent"
+                    android:text="Upload Photo"
+                    android:textAlignment="center"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp" />
+            </FrameLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/name_hd_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fl_uploadPhoto"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp">
+
+                <EditText
+                    android:id="@+id/nameofhomeless"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:hint="Name"
+                    android:inputType="text|textPersonName" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/gender_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/name_hd_layout"
+                android:layout_centerHorizontal="true">
+
+                <CheckBox
+                    android:id="@+id/cbMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:checked="true"
+                    android:text="Boy" />
+
+                <CheckBox
+                    android:id="@+id/cbFeMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignEnd="@id/name_hd_layout"
+                    android:layout_below="@+id/name_hd_layout"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginStart="40dp"
+                    android:text="Girl" />
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/age_hd_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gender_lay"
+                android:layout_marginBottom="5dp">
+
+                <EditText
+                    android:id="@+id/ageofhomeless"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:hint="Approximate Age"
+                    android:inputType="number" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/other_hd_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/age_hd_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp">
+
+                <EditText
+                    android:id="@+id/other"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:ems="10"
+                    android:hint="Other Details"
+                    android:inputType="textPersonName" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="18dp" />
+
+            <Button
+                android:id="@+id/done"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/other_hd_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorAccent"
+                android:text="Done" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
